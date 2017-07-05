@@ -16,6 +16,8 @@
     "react-dom": "^15.4.1",
     "react-server": "^0.6.4",
     "react-server-cli": "^0.6.4",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.70.0",
     "superagent": "1.8.4"
   },
   "devDependencies": {
@@ -23,6 +25,7 @@
     "babel-eslint": "^7.1.0",
     "eslint": "^3.11.1",
     "eslint-plugin-react": "6.7.1",
-    "nsp": "^2.3.3"
+    "nsp": "^2.3.3",
+    "semantic-ui": "^2.2.10"
   }
 }
