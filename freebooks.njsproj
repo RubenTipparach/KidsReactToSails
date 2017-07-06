@@ -31,6 +31,8 @@
   <ItemGroup>
     <Content Include=".babelrc" />
     <Content Include=".reactserverrc" />
+    <Content Include="images\image.png" />
+    <Content Include="images\short-paragraph.png" />
     <Content Include="package.json" />
     <Content Include="components\styles\index.css" />
     <Content Include="README.md" />
@@ -38,14 +40,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="components\" />
+    <Folder Include="images\" />
+    <Folder Include="middleware\" />
     <Folder Include="pages\" />
     <Folder Include="components\styles\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="components\example.js" />
     <Compile Include="components\hello-world.js" />
+    <Compile Include="components\homepage.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="middleware\JsonEndpoint.js" />
     <Compile Include="pages\example.js" />
     <Compile Include="pages\hello-world.js" />
+    <Compile Include="pages\homepage.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="pages\jsonpage.js" />
     <Compile Include="routes.js" />
     <Compile Include="test.js" />

@@ -1,3 +1,35 @@
 .bodybasic {
     background-color: #262626;
 }
+
+.containerBasic {
+    width: 1200px;
+    height: 960px;
+    overflow: auto;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.ui.items > .item > .content > .header {
+    color: #EEEEEE !important;
+}
+
+.ui.items > .item .meta {
+    color: #BBBBBB !important;
+}
+
+.ui.feed > .event > .content .date {
+    color: #CCCCCC !important;
+}
+
+.ui.feed > .event > .content .summary {
+    color: #DDDDDD !important;
+}
+
+.ui.feed > .event > .content .meta {
+    color: #BBBBBB !important;
+}
+
+.ui.feed > .event > .content .extra.text {
+    color: #BBBBBB !important;
+}

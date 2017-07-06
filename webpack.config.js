@@ -5,5 +5,11 @@ export default (webpackConfig) => {
         test: /\.s(a|c)ss$/,
         loaders: ["style", "css", "sass", "customloader"],
     });
-    return webpackConfig
+
+    webpackConfig.module.loaders.unshift({
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+    });
+
+    return webpackConfig;
 }

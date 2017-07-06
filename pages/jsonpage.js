@@ -1,5 +1,6 @@
 // returns a promise for example data
 //import getExampleData from './helpers/get-example-data';
+import JsonEndpoint from '../middleware/JsonEndpoint';
 
 export default class jsonpage {
 
@@ -11,7 +12,7 @@ export default class jsonpage {
         this.data = { "stuff": "things" };
         return { code: 200 };
     }
-
+    
     getResponseData() {
         return this.data;
     }

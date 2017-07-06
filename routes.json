@@ -3,11 +3,15 @@
   "routes": {
     "Homepage": {
       "path": "/",
-      "page": "pages/hello-world.js"
+      "page": "pages/homepage.js"
     },
     "example": {
       "path": "/example",
       "page": "pages/example.js"
+    },
+    "jsonTest": {
+      "path": "/jsontest",
+      "page": "pages/jsonpage.js"
     }
   }
 }

@@ -27,6 +27,7 @@
     "eslint-plugin-react": "6.7.1",
     "isomorphic-style-loader": "^2.0.0",
     "nsp": "^2.3.3",
-    "semantic-ui": "^2.2.10"
+    "semantic-ui": "^2.2.10",
+    "url-loader": "^0.5.9"
   }
 }
