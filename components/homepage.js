@@ -10,6 +10,8 @@ import {
 //import 'semantic-ui-css/semantic.min.css';
 import './styles/index.css';
 
+import Propchange from './propchange';
+
 const logger = logging.getLogger(__LOGGER__);
 
 
@@ -22,51 +24,63 @@ export default class Homepage extends React.Component {
             activeItem: 'home',
             newPosts: 0,
             newMessages: 0,
-            newFriends: 0
+            newFriends: 0,
+            thing: 1
         };
 
         this.events = [{
             date: '1 Hour Ago',
-            image: require('../images/avatar/small/elliot.jpg'),
+            image: require('!!file!../images/avatar/small/elliot.jpg'),
             meta: '4 Likes',
             summary: 'Elliot Fu added you as a friend',
         }, {
             date: '4 days ago',
-            image: require('../images/avatar/small/helen.jpg'),
+            image: require('!!file!../images/avatar/small/helen.jpg'),
             meta: '1 Like',
             summary: 'Helen Troy added 2 new illustrations',
             extraImages: [
-                require('../images/image.png'),
-                require('../images/image-text.png'),
+                require('!!file!../images/image.png'),
+                require('!!file!../images/image-text.png'),
             ],
         }, {
             date: '3 days ago',
-            image: require('../images/avatar/small/joe.jpg'),
+            image: require('!!file!../images/avatar/small/joe.jpg'),
             meta: '8 Likes',
             summary: 'Joe Henderson posted on his page',
             extraText: "Ours is a life of constant reruns. We're always circling back to where we'd we started.",
         }, {
             date: '4 days ago',
-            image: require('../images/avatar/small/justen.jpg'),
+            image: require('!!file!../images/avatar/small/justen.jpg'),
             meta: '41 Likes',
             summary: 'Justen Kitsune added 2 new photos of you',
             extraText: 'Look at these fun pics I found from a few years ago. Good times.',
             extraImages: [
-                require('../images/image.png'),
-                require('../images/image-text.png'),
+                require('!!file!../images/image.png'),
+                require('!!file!../images/image-text.png'),
             ]
         }
         ];
     }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    handleItemClick = (e, { name }) => {
+        this.setState({
+            activeItem: name
+        });
+    }
+
+    handlePostClick = (e, { name }) => {
+        logger.info(`Getting more excited! previously ${this.state.exclamationCount} excitements.`);
+        this.setState({
+            thing: this.state.thing + 1
+        });
+    }
 
     render() {
         const { activeItem } = this.state;
 
         //<div>
         return (
-            <Container text className="containerBasic">
+            <Container className="containerBasic">
                 <Menu inverted secondary fluid widths={5}>
                     <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
                         Post Feed
@@ -91,6 +105,8 @@ export default class Homepage extends React.Component {
 
                 <Segment inverted>
 
+                    {/*<Propchange thing={this.state.thing} />*/}
+
                     {this.itemPrototype(null)}
                     <Feed events={this.events} />
                 </Segment>
@@ -111,8 +127,9 @@ export default class Homepage extends React.Component {
                             {/*<Image src={require('!!file!../images/short-paragraph.png')} />*/}
                             <Form reply>
                                 <Form.TextArea autoHeight placeholder='Today was a good day...' style={{
-                                    minHeight: 50, backgroundColor: '#313133', color: ' #BFBCB8' }}/>
-                                <Button content='Post' labelPosition='left' icon='edit' primary />
+                                    minHeight: 50, backgroundColor: '#313133', color: ' #BFBCB8'
+                                }} />
+                                <Button content='Post' labelPosition='left' icon='edit' primary onClick={this.handlePostClick} />
                             </Form>
                         </Item.Description>
                         {/*<Item.Extra>Additional Details</Item.Extra>*/}

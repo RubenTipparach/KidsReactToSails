@@ -51,6 +51,9 @@
     <Compile Include="components\homepage.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="components\propchange.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="middleware\JsonEndpoint.js" />
     <Compile Include="pages\example.js" />
     <Compile Include="pages\hello-world.js" />

@@ -8,6 +8,7 @@
     overflow: auto;
     margin: auto;
     margin-top: 40px;
+    padding: 40px;
 }
 
 .ui.items > .item > .content > .header {
