@@ -2,7 +2,7 @@
 import React from 'react';
 import { logging } from 'react-server';
 
-import { Message, Button } from 'semantic-ui-react';
+import { Message, Button, Container } from 'semantic-ui-react';
 //import 'semantic-ui-css/semantic.min.css';
 import './styles/index.css';
 
@@ -21,12 +21,14 @@ export default class ExamplePage extends React.Component {
 
     render() {
         return (
-            <Message info>
-                <Message.Header>Was this what you wanted?</Message.Header>
-                <p>Did you know it's been a while?</p>
+            <Container text style={{width: 960, height: 960, overflow:'auto', margin: 'auto', marginTop: 20}}>
+                <Message info>
+                    <Message.Header>Was this what you wanted?</Message.Header>
+                    <p>Did you know it's been a while?</p>
 
-                <Button content="Stupidify" onClick={this.handleClick} />
-            </Message>
+                    <Button content="Stupidify" onClick={this.handleClick} />
+                </Message>
+            </Container>
         );
     }
 }
