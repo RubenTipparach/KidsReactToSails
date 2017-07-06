@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import ExamplePage from '../components/example';
+import '../components/styles/index.css';
 
 export default class example {
     // See [writing middleware](/docs/writing-middleware) for how to write middleware
@@ -28,7 +29,7 @@ export default class example {
     }
 
     getBodyClasses() {
-        return ["responsive-page", "typography"];
+        return ["responsive-page", "typography", "bodybasic"];
     }
 
     getElements() {

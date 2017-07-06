@@ -8,6 +8,7 @@
   "longTermCaching": false,
   "https": false,
   "logLevel": "debug",
+  "webpackConfig": "./webpack.config.js",
   "env": {
     "staging": {
       "port": "4000"

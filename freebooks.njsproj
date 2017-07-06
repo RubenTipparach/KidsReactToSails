@@ -32,12 +32,14 @@
     <Content Include=".babelrc" />
     <Content Include=".reactserverrc" />
     <Content Include="package.json" />
+    <Content Include="pages\styles\index.css" />
     <Content Include="README.md" />
     <Content Include="routes.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="components\" />
     <Folder Include="pages\" />
+    <Folder Include="pages\styles\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="components\example.js" />

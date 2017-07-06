@@ -4,6 +4,7 @@ import { logging } from 'react-server';
 
 import { Message, Button } from 'semantic-ui-react';
 //import 'semantic-ui-css/semantic.min.css';
+import './styles/index.css';
 
 const logger = logging.getLogger(__LOGGER__);
 
