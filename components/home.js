@@ -15,7 +15,7 @@ import Propchange from './propchange';
 const logger = logging.getLogger(__LOGGER__);
 
 
-export default class Homepage extends React.Component {
+export default class Home extends React.Component {
 
     constructor(props) {
         super(props);

@@ -46,21 +46,25 @@
     <Folder Include="components\styles\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="components\example.js" />
-    <Compile Include="components\hello-world.js" />
+    <Compile Include="components\friendslist.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="components\homepage.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="components\login.js" />
     <Compile Include="components\propchange.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="components\register.js" />
     <Compile Include="middleware\JsonEndpoint.js" />
-    <Compile Include="pages\example.js" />
-    <Compile Include="pages\hello-world.js" />
     <Compile Include="pages\homepage.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="pages\jsonpage.js" />
+    <Compile Include="pages\login.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.js" />
     <Compile Include="test.js" />
     <Compile Include="webpack.config.js" />

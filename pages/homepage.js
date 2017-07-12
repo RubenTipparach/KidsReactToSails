@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import Homepage from '../components/homepage';
+import Home from '../components/home';
 import '../components/styles/index.css';
 
 export default class homepage {
@@ -41,7 +41,7 @@ export default class homepage {
 
     getElements() {
         return (
-            <Homepage />
+            <Home />
         );
     }
 }

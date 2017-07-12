@@ -1,19 +1,25 @@
 ﻿import React from 'react';
-import ExamplePage from '../components/example';
+import Login from '../components/login';
 import '../components/styles/index.css';
 
-export default class example {
+export default class login {
     // See [writing middleware](/docs/writing-middleware) for how to write middleware
     //static middleware() { return [MobileEnabled]; }
 
     getTitle() {
-        return "Example page"
+        return "Freebooks Home"
     }
 
     getHeadStylesheets() {
         return [
-            "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"
+            "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css",
         ]
+    }
+
+    getScripts() {
+        return [
+            "https://code.jquery.com/jquery-3.1.1.min.js"
+        ];
     }
 
     getMetaTags() {
@@ -34,7 +40,7 @@ export default class example {
 
     getElements() {
         return (
-            <ExamplePage />
+            <Login />
         );
     }
 }

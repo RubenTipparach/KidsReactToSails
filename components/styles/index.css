@@ -34,3 +34,36 @@
 .ui.feed > .event > .content .extra.text {
     color: #BBBBBB !important;
 }
+
+.ui.form .field>label {
+    color: #BBBBBB !important;
+}
+
+.ui.checkbox input.hidden+label {
+    color: #BBBBBB !important;
+}
+
+.ui.secondary.inverted.menu .link.item, .ui.secondary.inverted.menu a.item {
+    margin-left: 10px;
+}
+
+.textInputOverride
+{
+    min-height: 50px;
+    background-color: #313133;
+    color: #BFBCB8;
+}
+
+.standardInputOverride {
+    background-color: #313133;
+    color: #BFBCB8;
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+    background-color: #313133;
+    color: #BFBCB8;
+}
+
+.ui.checkbox .box:before, .ui.checkbox label:before {
+    background-color: #313133 !important;
+}

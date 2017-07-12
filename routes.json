@@ -1,13 +1,13 @@
 {
   "middleware": [],
   "routes": {
-    "Homepage": {
+    "login": {
       "path": "/",
-      "page": "pages/homepage.js"
+      "page": "pages/loginpage.js"
     },
-    "example": {
-      "path": "/example",
-      "page": "pages/example.js"
+    "homepage": {
+      "path": "/home",
+      "page": "pages/homepage.js"
     },
     "jsonTest": {
       "path": "/jsontest",
