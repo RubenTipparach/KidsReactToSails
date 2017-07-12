@@ -7,13 +7,21 @@ import {
     TextBox, Form
 } from 'semantic-ui-react';
 
-//import 'semantic-ui-css/semantic.min.css';
 import './styles/index.css';
 
 import Propchange from './propchange';
+import PostFeed from './postfeed';
+import DirectMessage from './directmessage';
+import FriendsList from './friendslist';
 
 const logger = logging.getLogger(__LOGGER__);
 
+
+const pages = {
+    'feed': <PostFeed />,
+    'messages': <DirectMessage />,
+    'friends': <FriendsList />
+};
 
 export default class Home extends React.Component {
 
@@ -25,47 +33,19 @@ export default class Home extends React.Component {
             newPosts: 0,
             newMessages: 0,
             newFriends: 0,
-            thing: 1
+            thing: 1,
+            currentPage: pages['feed']
         };
 
-        this.events = [{
-            date: '1 Hour Ago',
-            image: require('!!file!../images/avatar/small/elliot.jpg'),
-            meta: '4 Likes',
-            summary: 'Elliot Fu added you as a friend',
-        }, {
-            date: '4 days ago',
-            image: require('!!file!../images/avatar/small/helen.jpg'),
-            meta: '1 Like',
-            summary: 'Helen Troy added 2 new illustrations',
-            extraImages: [
-                require('!!file!../images/image.png'),
-                require('!!file!../images/image-text.png'),
-            ],
-        }, {
-            date: '3 days ago',
-            image: require('!!file!../images/avatar/small/joe.jpg'),
-            meta: '8 Likes',
-            summary: 'Joe Henderson posted on his page',
-            extraText: "Ours is a life of constant reruns. We're always circling back to where we'd we started.",
-        }, {
-            date: '4 days ago',
-            image: require('!!file!../images/avatar/small/justen.jpg'),
-            meta: '41 Likes',
-            summary: 'Justen Kitsune added 2 new photos of you',
-            extraText: 'Look at these fun pics I found from a few years ago. Good times.',
-            extraImages: [
-                require('!!file!../images/image.png'),
-                require('!!file!../images/image-text.png'),
-            ]
-        }
-        ];
     }
 
     handleItemClick = (e, { name }) => {
         this.setState({
-            activeItem: name
+            activeItem: name,
+            currentPage: pages[name]
         });
+
+        
     }
 
     handlePostClick = (e, { name }) => {
@@ -82,7 +62,7 @@ export default class Home extends React.Component {
         return (
             <Container className="containerBasic">
                 <Menu inverted secondary fluid widths={5}>
-                    <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
+                    <Menu.Item name='feed' active={activeItem === 'feed'} onClick={this.handleItemClick}>
                         Post Feed
                         {
                             this.state.newPosts > 0 && <Label color='teal'>1</Label>
@@ -100,41 +80,13 @@ export default class Home extends React.Component {
                             this.state.newFriends > 0 && < Label color='teal'>1</Label>
                         }
                     </Menu.Item>
-
                 </Menu>
-
                 <Segment inverted>
-
                     {/*<Propchange thing={this.state.thing} />*/}
-
-                    {this.itemPrototype(null)}
-                    <Feed events={this.events} />
+                    {this.state.currentPage}
                 </Segment>
             </Container>
         );//</ div>
     }
 
-    itemPrototype(items) {
-        return (
-            <Item.Group>
-                <Item>
-                    <Item.Image size='tiny' src={require('!!file!../images/image.png')} />
-
-                    <Item.Content>
-                        <Item.Header>Header</Item.Header>
-                        <Item.Meta>Description</Item.Meta>
-                        <Item.Description>
-                            {/*<Image src={require('!!file!../images/short-paragraph.png')} />*/}
-                            <Form reply>
-                                <Form.TextArea autoHeight placeholder='Today was a good day...' style={{
-                                    minHeight: 50, backgroundColor: '#313133', color: ' #BFBCB8'
-                                }} />
-                                <Button content='Post' labelPosition='left' icon='edit' primary onClick={this.handlePostClick} />
-                            </Form>
-                        </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
-                    </Item.Content>
-                </Item>
-            </Item.Group>);
-    }
 }
