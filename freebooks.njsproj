@@ -46,13 +46,19 @@
     <Folder Include="components\styles\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\directmessage.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="components\friendslist.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="components\homepage.js">
+    <Compile Include="components\home.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="components\login.js" />
+    <Compile Include="components\postfeed.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="components\propchange.js">
       <SubType>Code</SubType>
     </Compile>
@@ -62,7 +68,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="pages\jsonpage.js" />
-    <Compile Include="pages\login.js">
+    <Compile Include="pages\loginpage.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.js" />
