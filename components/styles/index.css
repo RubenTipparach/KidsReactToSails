@@ -67,3 +67,10 @@
 .ui.checkbox .box:before, .ui.checkbox label:before {
     background-color: #313133 !important;
 }
+
+/* Custom textbox stuff */
+.customDarkTextbox {
+    min-height: 50px;
+    background-color: #313133;
+    color: #BFBCB8;
+}
